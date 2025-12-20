@@ -2,17 +2,18 @@
 #include "freertos/task.h"
 #include "driver/gpio.h"
 #include "stdio.h"
+#include "iostream"
 
-#define BLINK_GPIO 2
-
-void app_main(void)
+extern "C" void app_main(void)
 {
-    esp_rom_gpio_pad_select_gpio(BLINK_GPIO);
-    gpio_set_direction(BLINK_GPIO, GPIO_MODE_OUTPUT);
+    esp_rom_gpio_pad_select_gpio(GPIO_NUM_2);
+    gpio_set_direction(GPIO_NUM_2, GPIO_MODE_OUTPUT);
 
     int allocated = 0;
     int AMOUNT = 1000;
     printf("Hello world\n");
+
+    std::cout << "Now we can call C++ bitch" << std::endl;
 
     while (1)
     {
@@ -25,6 +26,7 @@ void app_main(void)
 
         allocated += AMOUNT;
         printf("allocated %i\n", allocated);
+
 
         if (addr == 0) {
             return;

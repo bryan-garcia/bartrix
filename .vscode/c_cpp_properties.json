@@ -1,13 +1,23 @@
 {
     "configurations": [
         {
-            "name": "Esp32",
+            "name": "bartrix-target",
             "includePath": [
-                "${workspaceFolder}/**"
+                "${workspaceFolder}/bartrix-target/**"
             ],
             "defines": [],
             "compileCommands": [
-                "${workspaceFolder}/build/compile_commands.json"
+                "${workspaceFolder}/bartrix-target/build/compile_commands.json"
+            ]
+        },
+        {
+            "name": "bartrix-sim",
+            "includePath": [
+                "${workspaceFolder}/bartrix-sim/**"
+            ],
+            "defines": [],
+            "compileCommands": [
+                "${workspaceFolder}/bartrix-sim/build/compile_commands.json"
             ]
         }
     ],

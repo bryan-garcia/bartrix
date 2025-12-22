@@ -1,0 +1,56 @@
+/**
+ * MIT License
+ * Copyright (c) 2022 Michał Jaroń <m.jaron@protonmail.com>
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in all
+ * copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ * SOFTWARE.
+ *
+ * This file is generated from a template.
+ * Do not modify it manually.
+ *
+ * @note Original resource path: ${ASSET_PATH}
+ */
+
+${ASSET_NAMESPACE_BEGIN}
+/**
+ * Contains content of the file: ${ASSET_PATH}
+ */
+extern const char* const ${ASSET_VARIABLE};
+
+/**
+ * Extension of asset file without a dot.
+ */
+extern const char* const ${ASSET_VARIABLE}_ext;
+
+/**
+ * Name of asset file without an extension.
+ */
+extern const char* const ${ASSET_VARIABLE}_name;
+
+/**
+ * Name of asset file.
+ */
+extern const char* const ${ASSET_VARIABLE}_filename;
+
+/**
+ * Size of asset in bytes.
+ */
+extern const long ${ASSET_VARIABLE}_size;
+
+${ASSET_NAMESPACE_END}
+

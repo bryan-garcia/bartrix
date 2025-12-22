@@ -1,0 +1,25 @@
+{
+    "configurations": [
+        {
+            "name": "bartrix-target",
+            "includePath": [
+                "${workspaceFolder}/bartrix-target/**"
+            ],
+            "defines": [],
+            "compileCommands": [
+                "${workspaceFolder}/bartrix-target/build/compile_commands.json"
+            ]
+        },
+        {
+            "name": "bartrix-sim",
+            "includePath": [
+                "${workspaceFolder}/bartrix-sim/**"
+            ],
+            "defines": [],
+            "compileCommands": [
+                "${workspaceFolder}/bartrix-sim/build/compile_commands.json"
+            ]
+        }
+    ],
+    "version": 4
+}

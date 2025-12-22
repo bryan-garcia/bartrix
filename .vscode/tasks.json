@@ -1,0 +1,104 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		// Bartrix Target Tasks
+		{
+			"label": "bartrix-target: build",
+			"type": "shell",
+			"command": ". ${env:IDF_PATH}/export.sh && idf.py build",
+			"options": {
+				"cwd": "${workspaceFolder}/bartrix-target"
+			},
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			}
+		},
+		{
+			"label": "bartrix-target: flash",
+			"type": "shell",
+			"command": ". ${env:IDF_PATH}/export.sh && idf.py flash",
+			"options": {
+				"cwd": "${workspaceFolder}/bartrix-target"
+			},
+			"group": {
+				"kind": "build",
+				"isDefault": false
+			}
+		},
+		{
+			"label": "bartrix-target: monitor",
+			"type": "shell",
+			"command": ". ${env:IDF_PATH}/export.sh && idf.py monitor",
+			"options": {
+				"cwd": "${workspaceFolder}/bartrix-target"
+			},
+			"group": {
+				"kind": "test",
+				"isDefault": true
+			}
+		},
+		{
+			"label": "bartrix-target: clean",
+			"type": "shell",
+			"command": ". ${env:IDF_PATH}/export.sh && idf.py fullclean",
+			"options": {
+				"cwd": "${workspaceFolder}/bartrix-target"
+			},
+			"group": {
+				"kind": "build",
+				"isDefault": false
+			}
+		},
+		{
+			"label": "bartrix-target: build and flash and monitor",
+			"type": "shell",
+			"command": ". ${env:IDF_PATH}/export.sh && idf.py build flash monitor",
+			"options": {
+				"cwd": "${workspaceFolder}/bartrix-target"
+			},
+			"group": {
+				"kind": "build",
+				"isDefault": false
+			}
+		}
+		// Bartrix Simulation Tasks
+		,
+		{
+			"label": "bartrix-sim: build",
+			"type": "shell",
+			"command": "mkdir -p build && cd build && cmake .. && cmake --build .",
+			"options": {
+				"cwd": "${workspaceFolder}/bartrix-sim"
+			},
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			}
+		},
+		{
+			"label": "bartrix-sim: run",
+			"type": "shell",
+			"command": "./bartrix-sim",
+			"options": {
+				"cwd": "${workspaceFolder}/bartrix-sim/build"
+			},
+			"dependsOn": [
+				"bartrix-sim: build"
+			],
+			"group": {
+				"kind": "test",
+				"isDefault": true
+			}
+		},
+		{
+			"label": "bartrix-sim: clean",
+			"type": "shell",
+			"command": "rm -rf build",
+			"options": {
+				"cwd": "${workspaceFolder}/bartrix-sim"
+			},
+			"problemMatcher": [],
+		}
+	]
+}

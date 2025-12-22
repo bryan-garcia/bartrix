@@ -90,6 +90,15 @@
 				"kind": "test",
 				"isDefault": true
 			}
+		},
+		{
+			"label": "bartrix-sim: clean",
+			"type": "shell",
+			"command": "rm -rf build",
+			"options": {
+				"cwd": "${workspaceFolder}/bartrix-sim"
+			},
+			"problemMatcher": [],
 		}
 	]
 }

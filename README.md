@@ -1,4 +1,4 @@
-# bartrix
+# BARTrix
 
 BART dashboard using LED matrix screen and esp32.
 
@@ -10,6 +10,10 @@ BART dashboard using LED matrix screen and esp32.
 
 3. Have the `IDF_PATH` environment variable set. Example: `$HOME/esp/v5.5.1/esp-idf`
 
+4. Protobuf (`sudo apt install protobuf-compiler libprotobuf-dev`)
+
+5. libcurl (`sudo apt install libcurl4-gnutls-dev`)
+
 # Architecture
 
 1. gtfs-tester: python application to prototype using gtfs protocol and bart feed.
@@ -20,6 +24,8 @@ BART dashboard using LED matrix screen and esp32.
 
 1. [ESP IDF Guide](https://docs.espressif.com/projects/esp-idf/en/stable/esp32/get-started/index.html)
 2. [esp32-wroom-32 datasheet](https://documentation.espressif.com/esp32-wroom-32_datasheet_en.pdf)
+3. [GTFS-RT Reference Guide](https://gtfs.org/documentation/realtime/reference/)
+4. [Protobuf C++](https://protobuf.dev/getting-started/cpptutorial/)
 
 # Getting Started
 
